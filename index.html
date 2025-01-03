@@ -50,7 +50,6 @@
     }
     nav {
         display: flex;
-        flex-direction: row; /* Default: horizontal layout */
         justify-content: center;
         background-color: #34495e;
         padding: 10px 0;
@@ -62,25 +61,11 @@
     nav a {
         color: #fff;
         text-decoration: none;
-        margin: 5px 10px;
+        margin: 0 15px;
         font-weight: bold;
-        flex: 1;
-        text-align: center;
     }
     nav a:hover {
         color: #f39c12;
-    }
-    @media only screen and (max-width: 768px) {
-        nav {
-            flex-direction: column; /* Switch to vertical layout */
-            padding: 10px;
-            align-items: flex-start; /* Align links to the left */
-        }
-        nav a {
-            margin: 10px 0; /* Adjust spacing for vertical layout */
-            font-size: 14px; /* Reduce font size on smaller screens */
-            text-align: left; /* Align text to the left */
-        }
     }
     .container {
         max-width: 100%;
@@ -156,6 +141,17 @@
         to {
             transform: translateY(0);
             opacity: 1;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        body {
+            padding: 0;
+        }
+        .card {
+            min-width: 90%;
+        }
+        nav a {
+            margin: 0 10px;
         }
     }
 </style>
