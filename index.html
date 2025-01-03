@@ -50,37 +50,24 @@
     }
     nav {
         display: flex;
-        flex-direction: row; /* Default: horizontal layout */
-        justify-content: center;
+        flex-direction: column; /* Make the navigation vertical */
+        justify-content: flex-start; /* Align items to the top */
         background-color: #34495e;
         padding: 10px 0;
         position: sticky;
         top: 0;
         z-index: 1000;
         animation: fadeIn 1s ease-in;
+        height: 100vh; /* Full height navigation */
     }
     nav a {
         color: #fff;
         text-decoration: none;
-        margin: 5px 10px;
+        margin: 10px 20px; /* Add spacing between links */
         font-weight: bold;
-        flex: 1;
-        text-align: center;
     }
     nav a:hover {
         color: #f39c12;
-    }
-    @media only screen and (max-width: 768px) {
-        nav {
-            flex-direction: column; /* Switch to vertical layout */
-            padding: 10px;
-            align-items: flex-start; /* Align links to the left */
-        }
-        nav a {
-            margin: 10px 0; /* Adjust spacing for vertical layout */
-            font-size: 14px; /* Reduce font size on smaller screens */
-            text-align: left; /* Align text to the left */
-        }
     }
     .container {
         max-width: 100%;
@@ -158,7 +145,14 @@
             opacity: 1;
         }
     }
+    @media only screen and (max-width: 768px) {
+        nav a {
+            font-size: 14px; /* Reduce text size for smaller screens */
+            margin: 5px 15px; /* Adjust margin */
+        }
+    }
 </style>
+
 
 </head>
 <body>
