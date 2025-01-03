@@ -50,7 +50,7 @@
     }
     nav {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row; /* Default: horizontal layout */
         justify-content: center;
         background-color: #34495e;
         padding: 10px 0;
@@ -72,11 +72,14 @@
     }
     @media only screen and (max-width: 768px) {
         nav {
-            flex-direction: column;
+            flex-direction: column; /* Switch to vertical layout */
             padding: 10px;
+            align-items: flex-start; /* Align links to the left */
         }
         nav a {
-            margin: 5px 0;
+            margin: 10px 0; /* Adjust spacing for vertical layout */
+            font-size: 14px; /* Reduce font size on smaller screens */
+            text-align: left; /* Align text to the left */
         }
     }
     .container {
